@@ -12,7 +12,7 @@ namespace Example.Persistance.Models
         [Key]
         public int Id { get; set; }
         [Key]
-        public TestEnum Second { get; set; }
+        public string Second { get; set; }
         public string? Name { get; set; }
         public virtual List<TestObject> Data { get; set; }
     }

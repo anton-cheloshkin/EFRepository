@@ -5,10 +5,10 @@ namespace EFRepository
     public abstract partial class EntitySelectorModel<TEntity> where TEntity : class
     {
 #nullable disable
-        protected Func<TEntity, TEntity, bool> EntitySelector { get; init; }
+        protected Func<TEntity, TEntity, bool> EntitySelectorCompiled { get; init; }
         public virtual Expression<Func<TEntity, bool>> WithPrimaryKey(TEntity search)
         {
-            return entry => EntitySelector(entry, search);
+            return entry => EntitySelectorCompiled(entry, search);
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Example.Persistance.Providers.PgSQL
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder
-                .Entity<OnePKEntity>()
-                .Property(x => x.Data)
-                .HasColumnType("jsonb");
-
+            //modelBuilder
+            //    .Entity<OnePKEntity>()
+            //    .Property(x => x.Data)
+            //    .HasColumnType("jsonb");
+           
             modelBuilder
                 .Entity<TwoPKEntity>()
                 .Property(x => x.Data)
